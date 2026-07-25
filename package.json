@@ -4,8 +4,12 @@
   "description": "Reads and streams source code tag files from Node.js.",
   "version": "4.0.0",
   "keywords": [
+    "ctags",
     "tags",
-    "etags"
+    "etags",
+    "symbols",
+    "native",
+    "streaming"
   ],
   "license": "MIT",
   "publishConfig": {
