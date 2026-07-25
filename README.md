@@ -1,4 +1,4 @@
-# @lumine-code/ctags
+# ctags
 
 Reads and streams source code tag files from Node.js.
 
