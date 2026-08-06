@@ -24,7 +24,7 @@
     "node-gyp": "^13.0.1"
   },
   "dependencies": {
-    "node-addon-api": "^8.5.0"
+    "node-addon-api": "^8.9.1"
   },
   "scripts": {
     "build": "node-gyp rebuild",
