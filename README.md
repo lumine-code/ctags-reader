@@ -28,31 +28,31 @@ npm test
 
 Get all tags matching the tag specified from the tags file at the path.
 
-* `tagsFilePath` - The string path to the tags file.
+- `tagsFilePath` - The string path to the tags file.
 
-* `tag` - The string name of the tag to search for.
+- `tag` - The string name of the tag to search for.
 
-* `options` - An optional options object containing the following keys:
+- `options` - An optional options object containing the following keys:
 
-  * `caseInsensitive` - `true` to include tags that match case insensitively,
+  - `caseInsensitive` - `true` to include tags that match case insensitively,
     (default: `false`)
-  * `partialMatch` - `true` to include tags that partially match the given tag
+  - `partialMatch` - `true` to include tags that partially match the given tag
     (default: `false`)
 
-* `callback` - The function to call when complete with an error as the first
-             argument and an array containing objects that have `name` and
-             `file` keys and optionally a `pattern` key if the tag file
-             specified contains tag patterns.
+- `callback` - The function to call when complete with an error as the first
+  argument and an array containing objects that have `name` and
+  `file` keys and optionally a `pattern` key if the tag file
+  specified contains tag patterns.
 
 #### Example
 
 ```js
-const ctags = require('@lumine-code/ctags')
+const ctags = require("@lumine-code/ctags");
 
-ctags.findTags('/Users/me/repos/node/tags', 'exists', (error, tags = []) => {
-  if (error) throw error
-  for (const tag of tags) console.log(`${tag.name} is in ${tag.file}`)
-})
+ctags.findTags("/Users/me/repos/node/tags", "exists", (error, tags = []) => {
+  if (error) throw error;
+  for (const tag of tags) console.log(`${tag.name} is in ${tag.file}`);
+});
 ```
 
 ### createReadStream(tagsFilePath, [options])
@@ -67,24 +67,25 @@ An `error` event will be emitted if the tag file cannot be read.
 
 An `end` event will be emitted when all the tags have been read.
 
-* `tagsFilePath` - The string path to the tags file.
+- `tagsFilePath` - The string path to the tags file.
 
-* `options` - An optional object containing the following keys.
+- `options` - An optional object containing the following keys.
 
-  * `chunkSize` - The number of tags to read at a time (default: `100`).
+  - `chunkSize` - The number of tags to read at a time (default: `100`).
 
 Returns a stream.
+
 #### Example
 
 ```js
-const ctags = require('@lumine-code/ctags')
+const ctags = require("@lumine-code/ctags");
 
-const stream = ctags.createReadStream('/Users/me/repos/node/tags')
-stream.on('data', tags => {
+const stream = ctags.createReadStream("/Users/me/repos/node/tags");
+stream.on("data", (tags) => {
   for (const tag of tags) {
-    console.log(`${tag.name} is in ${tag.file} with pattern: ${tag.pattern}`)
+    console.log(`${tag.name} is in ${tag.file} with pattern: ${tag.pattern}`);
   }
-})
+});
 ```
 
 ## Contributing
