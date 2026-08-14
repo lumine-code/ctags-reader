@@ -39,10 +39,7 @@ Get all tags matching the tag specified from the tags file at the path.
   - `partialMatch` - `true` to include tags that partially match the given tag
     (default: `false`)
 
-- `callback` - The function to call when complete with an error as the first
-  argument and an array containing objects that have `name` and
-  `file` keys and optionally a `pattern` key if the tag file
-  specified contains tag patterns.
+- `callback` - The function to call when complete with an error as the first argument and an array containing objects that have `name` and `file` keys and optionally a `pattern` key if the tag file specified contains tag patterns.
 
 #### Example
 
@@ -59,9 +56,7 @@ ctags.findTags("/Users/me/repos/node/tags", "exists", (error, tags = []) => {
 
 Create a read stream to a tags file.
 
-The stream returned will emit `data` events with arrays of tag objects
-that have `name` and `file` keys and optionally a `pattern` key if the tag file
-specified contains tag patterns.
+The stream returned will emit `data` events with arrays of tag objects that have `name` and `file` keys and optionally a `pattern` key if the tag file specified contains tag patterns.
 
 An `error` event will be emitted if the tag file cannot be read.
 
