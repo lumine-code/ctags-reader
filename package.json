@@ -2,7 +2,7 @@
   "name": "@lumine-code/ctags",
   "author": "lumine-code",
   "description": "Reads and streams source code tag files from Node.js.",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "keywords": [
     "ctags",
     "tags",
