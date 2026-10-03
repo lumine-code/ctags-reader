@@ -1,4 +1,4 @@
-# ctags
+# ctags-reader
 
 Reads and streams source code tag files from Node.js.
 
@@ -11,7 +11,7 @@ Reads and streams source code tag files from Node.js.
 ## Installation
 
 ```sh
-npm install @lumine-code/ctags
+npm install @lumine-code/ctags-reader
 ```
 
 ## Building
@@ -34,17 +34,15 @@ Get all tags matching the tag specified from the tags file at the path.
 
 - `options` - An optional options object containing the following keys:
 
-  - `caseInsensitive` - `true` to include tags that match case insensitively,
-    (default: `false`)
-  - `partialMatch` - `true` to include tags that partially match the given tag
-    (default: `false`)
+  - `caseInsensitive` - `true` to include tags that match case insensitively, (default: `false`)
+  - `partialMatch` - `true` to include tags that partially match the given tag (default: `false`)
 
 - `callback` - The function to call when complete with an error as the first argument and an array containing objects that have `name` and `file` keys and optionally a `pattern` key if the tag file specified contains tag patterns.
 
 #### Example
 
 ```js
-const ctags = require("@lumine-code/ctags");
+const ctags = require("@lumine-code/ctags-reader");
 
 ctags.findTags("/Users/me/repos/node/tags", "exists", (error, tags = []) => {
   if (error) throw error;
@@ -73,7 +71,7 @@ Returns a stream.
 #### Example
 
 ```js
-const ctags = require("@lumine-code/ctags");
+const ctags = require("@lumine-code/ctags-reader");
 
 const stream = ctags.createReadStream("/Users/me/repos/node/tags");
 stream.on("data", (tags) => {

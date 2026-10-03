@@ -1,5 +1,5 @@
 {
-  "name": "@lumine-code/ctags",
+  "name": "@lumine-code/ctags-reader",
   "author": "lumine-code",
   "description": "Reads and streams source code tag files from Node.js.",
   "version": "1.0.0",
@@ -15,9 +15,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/lumine-code/node-ctags",
-  "bugs": "https://github.com/lumine-code/node-ctags/issues",
-  "homepage": "https://github.com/lumine-code/node-ctags",
+  "repository": "https://github.com/lumine-code/ctags-reader",
+  "bugs": "https://github.com/lumine-code/ctags-reader/issues",
+  "homepage": "https://github.com/lumine-code/ctags-reader",
   "main": "./lib/ctags.js",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
