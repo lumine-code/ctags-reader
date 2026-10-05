@@ -2,17 +2,13 @@
 
 Reads and streams source code tag files from Node.js.
 
+This repository is archived and is no longer maintained by lumine-code. It served the retired symbol-ctags package; the editor no longer depends on a ctags reader. The remaining source, build instructions and API documentation describe its final historical implementation.
+
 ## Features
 
 - **Tag lookup**: finds exact, partial, and case-insensitive matches in ctags files.
 - **Streaming reads**: emits parsed tags in chunks without loading the full file into memory.
 - **Node-API addon**: provides native tag parsing without relying on V8-specific APIs.
-
-## Installation
-
-```sh
-npm install @lumine-code/ctags-reader
-```
 
 ## Building
 
