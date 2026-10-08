@@ -2,6 +2,8 @@
 
 Reads and streams source code tag files from Node.js.
 
+Fork of [atom/node-ctags](https://github.com/atom/node-ctags).
+
 This repository is archived and is no longer maintained by lumine-code. It served the retired symbol-ctags package; the editor no longer depends on a ctags reader. The remaining source, build instructions and API documentation describe its final historical implementation.
 
 ## Features
